@@ -1,4 +1,4 @@
-# My-Engineered-Prompts
+# My-Entrepreneurship-Ecosystem
 
 A personal directory of engineered AI prompts — structured system prompts, workflows, and templates built for use in LLM chat sessions (Cursor, ChatGPT, Claude, and similar tools).
 
