@@ -8,6 +8,8 @@ Product management and engineering planning. This folder picks up after an oppor
 | [`EOS.md`](EOS.md) | AI Engineering Operating System — full multi-discipline engineering team |
 | [`BOS.md`](BOS.md) | AI Backend Operating System — dedicated backend team for deep server-side planning |
 | [`FOS.md`](FOS.md) | AI Frontend Operating System — dedicated frontend team for deep client-side planning |
+| [`DOOS.md`](DOOS.md) | AI DevOps Operating System — deployment, infrastructure, and operations planning |
+| [`CYOS.md`](CYOS.md) | AI Cybersecurity Operating System — security audit, threat posture, and compliance assessment |
 
 ---
 
@@ -16,12 +18,16 @@ Product management and engineering planning. This folder picks up after an oppor
 These prompts are part of a larger pipeline that spans folders in this repo:
 
 ```
-[Optional: AOS — standalone, see Business/] → ERP → PMOS → EPD → Design/DOS → DSP → EOS → TDP → Development
+[Optional: AOS — standalone, see Business/] → ERP → PMOS → EPD → Design/DOS → DSP
                                                                          |
-                                                                   or BOS → BTP → Development
+                                              ┌──────────────────────────┼──────────────────────────┐
+                                         EOS → TDP                 BOS → BTP                 FOS → FTP
+                                              └──────────────────────────┴──────────────────────────┘
+                                                                         |
+                                                                DOOS → DOTP → Production
 ```
 
-PMOS can begin work directly from a raw idea, or optionally with an ERP from AOS — see `Business/AOS-ForProfit.md` or `Business/AOS-NonProfit.md`. PMOS hands its EPD to `Design/DOS.md`, which defines how the product should look, feel, and behave. From there, EOS (full engineering team), BOS (dedicated backend team), or FOS (dedicated frontend team) picks up for implementation planning — or BOS and FOS run in parallel for projects with significant complexity on both sides. `Business/COT.md` may pull in any of these deliverables at any point for executive review — see `Business/README.md`.
+PMOS can begin work directly from a raw idea, or optionally with an ERP from AOS — see `Business/AOS-ForProfit.md` or `Business/AOS-NonProfit.md`. PMOS hands its EPD to `Design/DOS.md`, which defines how the product should look, feel, and behave. From there, EOS (full engineering team), BOS (dedicated backend team), or FOS (dedicated frontend team) picks up for implementation planning — or BOS and FOS run in parallel for projects with significant complexity on both sides. DOOS then takes the resulting TDP, BTP, or FTP and produces the full infrastructure, deployment, and operations plan. CYOS runs alongside or after DOOS, receiving any combination of upstream packages and producing a comprehensive security audit, threat posture, and compliance assessment. `Business/COT.md` may pull in any of these deliverables at any point for executive review — see `Business/README.md`.
 
 ### EOS vs. BOS vs. FOS — Which to Use
 
@@ -69,6 +75,8 @@ Paste the full file into a new chat. The lead role initializes by introducing th
 | **EOS** | DSPs (from `Design/DOS.md`, preferred) or approved EPDs, product requirements, technical challenges |
 | **BOS** | DSPs (from `Design/DOS.md`, preferred) or approved EPDs, feature requests, backend-specific technical challenges |
 | **FOS** | DSPs (from `Design/DOS.md`, preferred) or approved EPDs, feature requests, frontend-specific technical challenges |
+| **DOOS** | TDPs (from EOS), BTPs (from BOS), FTPs (from FOS), or any combination — plus direct infrastructure directives |
+| **CYOS** | DOTPs (from DOOS), BTPs (from BOS), TDPs (from EOS), FTPs (from FOS), or any combination — plus direct security directives |
 
 ### 5. Don't skip Design/DOS for anything with real UI surface area
 
@@ -92,7 +100,9 @@ Technical/
 ├── PMOS.md
 ├── EOS.md
 ├── BOS.md
-└── FOS.md
+├── FOS.md
+├── DOOS.md
+└── CYOS.md
 ```
 
 ## Design Principles
@@ -101,5 +111,5 @@ Technical/
 - **Structured deliverables** — Templates enforce consistent, reviewable outputs.
 - **Explicit handoffs** — Status indicators (green / yellow / red) signal when work is ready to move forward, including across folder boundaries.
 - **Independent validation** — Downstream prompts review upstream findings and document disagreements.
-- **Clear boundaries** — PMOS does not specify visuals; EOS, BOS, and FOS do not redefine product or design decisions unless explicitly asked. EOS, BOS, and FOS don't overlap — choose based on what your project needs.
+- **Clear boundaries** — PMOS does not specify visuals; EOS, BOS, FOS, DOOS, and CYOS do not redefine product or design decisions unless explicitly asked. EOS, BOS, and FOS don't overlap — choose based on what your project needs. DOOS operates on what they produce. CYOS audits and challenges what all of them planned — it does not simply validate it.
 - **You decide** — These prompts recommend; you remain Project Owner and final decision maker.

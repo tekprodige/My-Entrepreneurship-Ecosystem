@@ -9,7 +9,7 @@ This repo grows over time. Prompts are organized by category so you can browse, 
 | Category | Description | Prompts |
 | -------- | ----------- | ------- |
 | [**Business/**](Business/) | Executive oversight and opportunity advisory | [AOS — For-Profit](Business/AOS-ForProfit.md) · [AOS — Non-Profit](Business/AOS-NonProfit.md) · [COT](Business/COT.md) |
-| [**Technical/**](Technical/) | Product management and engineering planning | [PMOS](Technical/PMOS.md) · [EOS](Technical/EOS.md) · [BOS](Technical/BOS.md) · [FOS](Technical/FOS.md) |
+| [**Technical/**](Technical/) | Product management, engineering, and security planning | [PMOS](Technical/PMOS.md) · [EOS](Technical/EOS.md) · [BOS](Technical/BOS.md) · [FOS](Technical/FOS.md) · [DOOS](Technical/DOOS.md) · [CYOS](Technical/CYOS.md) |
 | [**Marketing/**](Marketing/) | Go-to-market and brand strategy | [MOS](Marketing/MOS.md) |
 | [**Design/**](Design/) | Design specification and handoff | [DOS](Design/DOS.md) |
 | [**Personal/**](Personal/) | Personal, day-to-day assistance (standalone) | [Assistant](Personal/Assistant.md) |
@@ -36,7 +36,9 @@ These prompts aren't fully independent — several are designed to hand off deli
                        EOS → TDP              BOS → BTP              FOS → FTP
                             └───────────────────────┴───────────────────────┘
                                                     |
-                                              Development
+                                            DOOS → DOTP ←→ CYOS → SAP
+                                                    |
+                                              Production
                                   |
                     MOS (Marketing/) — can be called in parallel,
                     at any stage, for go-to-market or brand input
@@ -45,6 +47,10 @@ These prompts aren't fully independent — several are designed to hand off deli
 **AOS is standalone and optional.** It isn't shown in the pipeline diagram above because it doesn't require, and isn't required by, anything else in this repo. If you want an executive-level opportunity evaluation before product work begins, run AOS first (choose the For-Profit or Non-Profit edition — see `Business/README.md`) and optionally carry its ERP into PMOS or COT. If you'd rather skip straight to product definition, that's fine too — PMOS doesn't need an ERP to function.
 
 **EOS, BOS, and FOS are alternatives, not a sequence** — pick the one(s) that fit your project. EOS covers all engineering disciplines together. BOS covers backend only, in full depth. FOS covers frontend only, in full depth. BOS + FOS can run in parallel for projects with significant complexity on both sides.
+
+**DOOS runs after EOS, BOS, or FOS** — it takes their technical packages and produces the full infrastructure, deployment, and operations plan needed to get the system into production.
+
+**CYOS runs alongside or after DOOS** — it receives infrastructure and application context from any upstream package and produces a comprehensive security audit, threat posture, and compliance plan. CYOS challenges and validates security decisions made by other teams — it doesn't just review what they planned.
 
 | Prompt | Folder | Core Question | Primary Output |
 | ------ | ------ | -------------- | --------------- |
@@ -55,6 +61,8 @@ These prompts aren't fully independent — several are designed to hand off deli
 | **EOS** | Technical/ | How should it be built? | Technical Design Package (TDP) |
 | **BOS** | Technical/ | How should the backend be built? | Backend Technical Package (BTP) |
 | **FOS** | Technical/ | How should the frontend be built? | Frontend Technical Package (FTP) |
+| **DOOS** | Technical/ | How do we deploy, operate, and protect this in production? | DevOps Technical Package (DOTP) |
+| **CYOS** | Technical/ | Is this system secure, and what does it take to keep it that way? | Security Assessment Package (SAP) |
 | **MOS** | Marketing/ | How do we build awareness, demand, and trust for this? | Go-to-Market Plan (GTM) or Marketing Strategy Dossier (MSD) |
 
 If you're handing a deliverable from one prompt to another across folders (e.g. an AOS-produced ERP into PMOS, if you chose to use AOS), carry the **full** package, not a summary — the templates are built to be machine-readable by the next prompt, and summarizing strips out the structured fields the next stage depends on.
@@ -73,12 +81,14 @@ My-Entrepreneurship-Ecosystem/
 │   ├── AOS-ForProfit.md
 │   ├── AOS-NonProfit.md
 │   └── COT.md
-├── Technical/               # Product management and engineering planning
+├── Technical/               # Product management, engineering, and security planning
 │   ├── README.md
 │   ├── PMOS.md
 │   ├── EOS.md
 │   ├── BOS.md
-│   └── FOS.md
+│   ├── FOS.md
+│   ├── DOOS.md
+│   └── CYOS.md
 ├── Marketing/               # Go-to-market and brand strategy
 │   ├── README.md
 │   └── MOS.md
