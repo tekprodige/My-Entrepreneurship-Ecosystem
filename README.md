@@ -4,6 +4,18 @@ An interconnected ecosystem of AI prompts for running a venture end to end — f
 
 This repo grows over time. Prompts are organized by category so you can browse, copy, and adapt them for your own work.
 
+## What's New in v3
+
+v3 is an efficiency release — every operating system was restructured based on real-world use so sessions start faster, cost fewer tokens, and produce leaner outputs.
+
+- **Fast start** — Teams now open with a single compact message: a roster table, a one-line ready confirmation, and a request for your first input. The long introductions and readiness reports from v2 are gone.
+- **Adaptive deliverables** — Every deliverable (ERP, EPD, DSP, TDP, BTP, FTP, DOTP, SAP, GTM/MSD, EOP) now generates only the sections relevant to the task, closing with a one-line list of what was omitted. A small feature request gets a short package; a full system gets a full one.
+- **Condensed boilerplate** — Profile Standards and continuity rules were cut from tables-plus-paragraphs down to a few sentences, without losing the two guarantees that matter: role consistency within a session, and no false claims of cross-session memory.
+- **Single-conversation rule everywhere** — EOS's old one-thread-per-engineer instruction (a v2.1 leftover) was replaced. Every OS now runs its full team in one conversation, with structured deliverables as the only thing that crosses between threads.
+- **What didn't change** — Board Operating Rules and the disagreement mechanic are fully intact. Specialists still think independently, still disagree openly, and managers still document conflicts rather than resolving them. Efficiency cuts ceremony, not judgment.
+
+New since v2 launched: **BOS** (backend), **FOS** (frontend), **DOOS** (DevOps), and **CYOS** (cybersecurity) — four lean, dedicated engineering teams that can replace or complement the full EOS org. AOS also split into standalone **For-Profit** and **Non-Profit** editions.
+
 ## Prompt Directory
 
 | Category | Description | Prompts |
@@ -17,6 +29,8 @@ This repo grows over time. Prompts are organized by category so you can browse, 
 *More categories and prompts will be added here as they are developed.*
 
 Each category folder has its own README with prompt-specific best practices, structure, and design principles. Start there once you've picked a category.
+
+**Fastest way to start:** use the [Universal Activation Prompt](Activation-Prompt.md). Fill in three fields — your name, your title, your company — and paste it into a new chat with any OS file. The AI generates a fitting fictitious name and personality for every role, so you skip filling the `[*_NAME]` placeholders by hand, and the team knows who the Project Owner is from message one. Two tips: names don't persist between conversations, so if you like a generated team, note the names and add "Use these names: …" next time; and if a personality ever starts overriding a specialist's judgment (an optimistic CFO who stops flagging risk), remind the team that role responsibilities outrank personality.
 
 ---
 
@@ -76,6 +90,7 @@ If you're handing a deliverable from one prompt to another across folders (e.g. 
 ```
 My-Entrepreneurship-Ecosystem/
 ├── README.md              # This directory index
+├── Activation-Prompt.md    # Universal three-field prompt to activate any OS
 ├── Business/               # Executive oversight and opportunity advisory
 │   ├── README.md
 │   ├── AOS-ForProfit.md
@@ -108,11 +123,12 @@ This repo is versioned by branch, not by tag. Each major version of the ecosyste
 
 | Branch | Status |
 | ------ | ------ |
-| `v2` | Current |
+| `v3` | Current |
+| `v2` | Archived |
 
 When a new version is started, it gets its own branch (e.g. `v3`) rather than overwriting `v2` in place. This keeps prior versions intact and browsable even after the ecosystem moves forward — useful since individual prompt templates (AOS, PMOS, COT, etc.) may change structurally between versions in ways that aren't backward compatible.
 
-`main` always reflects the current version — for `v2`, that means `main` and the `v2` branch are kept in sync. If you're cloning or pulling this repo and just want the latest, `main` is fine; check out a specific version branch only if you need to reference an older one.
+`main` always reflects the current version — for `v3`, that means `main` and the `v3` branch are kept in sync. If you're cloning or pulling this repo and just want the latest, `main` is fine; check out a specific version branch only if you need to reference an older one.
 
 ## License
 

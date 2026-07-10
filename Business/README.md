@@ -47,9 +47,9 @@ All three prompts use bracketed placeholders. Replace all of them before pasting
 
 Each prompt is designed to hold a single, persistent role across a conversation. Running AOS and COT in the same thread blurs their boundaries. Start a new thread per prompt, and a new thread per COT session if you're running parallel executive reviews.
 
-### 4. Activate, then wait for the readiness report
+### 4. Activate — the team starts fast
 
-Paste the full file into a new chat. The lead role (or, for COT, the full officer roster) initializes by introducing the team, confirming roles, submitting a readiness report, and requesting your first input. Don't submit your first idea, ERP, EPD, or TDP until you see that readiness confirmation.
+Paste the full file into a new chat. In v3, the team responds with a compact roster table and asks for your first input — no long introductions or readiness report. You can submit your first input immediately after that one confirmation message.
 
 ### 5. Know what to submit to each
 
