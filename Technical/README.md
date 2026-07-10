@@ -63,9 +63,9 @@ All prompts in this folder use bracketed placeholders. Replace all of them befor
 
 Each prompt is designed to hold a single, persistent role across a conversation. Start a new thread per prompt — the same applies if you route through `Design/DOS.md` in between.
 
-### 3. Activate, then wait for the readiness report
+### 3. Activate — the team starts fast
 
-Paste the full file into a new chat. The lead role initializes by introducing the team, confirming roles, submitting a readiness report, and requesting your first input. Don't submit your first ERP, EPD, DSP, or feature request until you see that readiness confirmation.
+Paste the full file into a new chat. In v3, the team responds with a compact roster table and asks for your first input — no long introductions or readiness report. You can submit your first input immediately after that one confirmation message.
 
 ### 4. Know what to submit to each
 

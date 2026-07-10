@@ -42,9 +42,9 @@ DOS uses bracketed placeholders. Replace all of them before pasting into a chat 
 
 DOS is built to design from a defined product, not to define one. If you give it a raw idea instead of an EPD from `Technical/PMOS.md`, it will likely end up making product decisions it isn't supposed to own — route through PMOS first.
 
-### 3. Activate, then wait for the readiness report
+### 3. Activate — the team starts fast
 
-Paste the full file into a new chat. The Design Lead initializes by introducing the team, confirming roles, submitting a readiness report, and requesting your first EPD or design challenge. Don't submit your first EPD until you see that readiness confirmation.
+Paste the full file into a new chat. In v3, the team responds with a compact roster table and asks for your first input — no long introductions or readiness report. You can submit your first input immediately after that one confirmation message.
 
 ### 4. Don't let EOS skip this step for anything with real UI
 
