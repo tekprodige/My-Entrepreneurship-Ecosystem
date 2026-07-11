@@ -1,20 +1,21 @@
 # Personal/
 
-Personal, day-to-day assistance — unrelated to the Business → Technical → Design pipeline. This folder holds prompts meant for individual use rather than venture or project work.
+Prompts centered on you, the individual — rather than any one venture, team, or pipeline stage. Day-to-day personal assistance, plus founder-level utilities that serve every team you activate.
 
 | Prompt | Description |
 | ------ | ----------- |
 | [`Assistant.md`](Assistant.md) | AI Personal Assistant — planning, research, drafting, follow-ups, thinking partner, and life admin in one persona |
+| [`Company-Briefing.md`](Company-Briefing.md) | Internal Company Briefing (ICB) Generator — interviews you, then writes the orientation document every new team reads before its first task |
 
 ---
 
 ## How This Differs From the Other Folders
 
-Every other folder in this repo (`Business/`, `Technical/`, `Design/`, `Marketing/`) is built around independent specialist roles producing structured deliverables that hand off to each other. `Personal/` is intentionally not that.
+Every other folder in this repo (`Business/`, `Technical/`, `Design/`, `Marketing/`) is built around independent specialist roles producing structured deliverables that hand off to each other. `Personal/` is intentionally not that — both prompts here are **single personas**, not teams, and both are **standalone**: no pipeline position, no required integration with any other OS.
 
-The Assistant is a **single persona**, not a team — there's no readiness report, no profile initialization, no simulated disagreement between roles. It switches between six modes (Planning, Research, Drafting, Follow-Up, Thinking Partner, Life Admin) based on what you ask for, the way one person would, not a committee.
+**The Assistant** switches between six modes (Planning, Research, Drafting, Follow-Up, Thinking Partner, Life Admin) based on what you ask for, the way one person would, not a committee.
 
-It's also **standalone**: no cross-folder references, no pipeline position, no COT hooks. Nothing here is designed to integrate with AOS, PMOS, DOS, EOS, or MOS.
+**The Company Briefing Generator** is a founder utility: it interviews you about your company — the facts, the foundation, the values, the locked decisions, the long game — then writes an Internal Company Briefing (ICB) in your voice. The finished ICB is what connects this folder to everything else: you paste it into any newly activated team (AOS, COT, BOS, FOS, or any AI team anywhere) so they know who they work for and what standard their output is held to, before their first task. The generator itself stays standalone; the *document it produces* travels everywhere.
 
 ---
 
@@ -47,7 +48,11 @@ If you skip this, the assistant has no way to know it's "you" again — it will 
 
 The assistant is instructed to drop closed loops and completed tasks rather than archive them, and to flag when the log is getting long. If you're hand-editing it yourself, follow the same instinct — this is a working log, not a history file.
 
-### 5. Don't expect real-world actions
+### 5. Generate your ICB once, reuse it everywhere
+
+Run `Company-Briefing.md` in its own session, approve the final document, and save it alongside your OS files. From then on, every new team activation is three pastes: activation prompt → OS file → your ICB. Regenerate or revise the ICB when major decisions get locked or the company structure changes — don't let teams operate on a stale briefing.
+
+### 6. Don't expect real-world actions
 
 The assistant can draft, plan, and track, but it can't actually send an email, book an appointment, or set an external reminder unless you've connected real tools for that. It's built to be explicit about this rather than imply otherwise.
 
@@ -58,7 +63,8 @@ The assistant can draft, plan, and track, but it can't actually send an email, b
 ```
 Personal/
 ├── README.md      # This file
-└── Assistant.md
+├── Assistant.md
+└── Company-Briefing.md
 ```
 
 ## Design Principles
@@ -67,4 +73,5 @@ Personal/
 - **Honest about memory** — never claims to recall something that wasn't in the Memory Log you provided this session.
 - **Honest about action** — never implies it took a real-world action it didn't actually take.
 - **Brevity by default** — expands into structure only when the task calls for it.
-- **You decide** — this prompt prepares options, drafts, and plans; you make the calls.
+- **Your words outrank the AI's** — the Briefing Generator extracts and structures your values; it never invents them, and never dilutes your convictions into corporate-safe language.
+- **You decide** — these prompts prepare options, drafts, and documents; you approve every word.
