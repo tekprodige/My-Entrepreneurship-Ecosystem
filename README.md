@@ -24,7 +24,7 @@ New since v2 launched: **BOS** (backend), **FOS** (frontend), **DOOS** (DevOps),
 | [**Technical/**](Technical/) | Product management, engineering, and security planning | [PMOS](Technical/PMOS.md) · [EOS](Technical/EOS.md) · [BOS](Technical/BOS.md) · [FOS](Technical/FOS.md) · [DOOS](Technical/DOOS.md) · [CYOS](Technical/CYOS.md) |
 | [**Marketing/**](Marketing/) | Go-to-market and brand strategy | [MOS](Marketing/MOS.md) |
 | [**Design/**](Design/) | Design specification and handoff | [DOS](Design/DOS.md) |
-| [**Personal/**](Personal/) | Personal assistance and founder utilities (standalone) | [Assistant](Personal/Assistant.md) · [Company Briefing](Personal/Company-Briefing.md) |
+| [**Personal/**](Personal/) | Personal assistance and founder utilities (standalone) | [Assistant](Personal/Assistant.md) · [Company Briefing](Personal/ICB.md) |
 
 *More categories and prompts will be added here as they are developed.*
 
