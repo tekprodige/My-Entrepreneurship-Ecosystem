@@ -24,7 +24,7 @@ New since v2 launched: **BOS** (backend), **FOS** (frontend), **DOOS** (DevOps),
 | [**Technical/**](Technical/) | Product management, engineering, and security planning | [PMOS](Technical/PMOS.md) · [EOS](Technical/EOS.md) · [BOS](Technical/BOS.md) · [FOS](Technical/FOS.md) · [DOOS](Technical/DOOS.md) · [CYOS](Technical/CYOS.md) |
 | [**Marketing/**](Marketing/) | Go-to-market and brand strategy | [MOS](Marketing/MOS.md) |
 | [**Design/**](Design/) | Design specification and handoff | [DOS](Design/DOS.md) |
-| [**Personal/**](Personal/) | Personal, day-to-day assistance (standalone) | [Assistant](Personal/Assistant.md) |
+| [**Personal/**](Personal/) | Personal assistance and founder utilities (standalone) | [Assistant](Personal/Assistant.md) · [Company Briefing](Personal/Company-Briefing.md) |
 
 *More categories and prompts will be added here as they are developed.*
 
@@ -81,7 +81,7 @@ These prompts aren't fully independent — several are designed to hand off deli
 
 If you're handing a deliverable from one prompt to another across folders (e.g. an AOS-produced ERP into PMOS, if you chose to use AOS), carry the **full** package, not a summary — the templates are built to be machine-readable by the next prompt, and summarizing strips out the structured fields the next stage depends on.
 
-**`Personal/` is not part of this pipeline.** The Assistant prompt is a standalone, single-persona template for day-to-day personal use — it doesn't hand off to or receive from any of the prompts above. See `Personal/README.md` for how it works, including its own persistence system (a portable Memory Log, since it's designed to run on any AI model).
+**`Personal/` is not part of this pipeline.** Both of its prompts are standalone, single-persona templates. The Assistant handles day-to-day personal use, with its own persistence system (a portable Memory Log, since it's designed to run on any AI model). The Company Briefing Generator interviews you and produces an Internal Company Briefing (ICB) — the one `Personal/` output that touches everything else, since you paste the finished ICB into every newly activated team so it knows who it works for before its first task. See `Personal/README.md` for both.
 
 ---
 
@@ -110,9 +110,10 @@ My-Entrepreneurship-Ecosystem/
 ├── Design/                  # Design specification and handoff
 │   ├── README.md
 │   └── DOS.md
-└── Personal/                # Personal, day-to-day assistance (standalone)
+└── Personal/                # Personal assistance and founder utilities (standalone)
     ├── README.md
-    └── Assistant.md
+    ├── Assistant.md
+    └── Company-Briefing.md
 ```
 
 New prompt categories can be added as top-level folders, each with its own README.
